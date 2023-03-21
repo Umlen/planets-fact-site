@@ -1,0 +1,16 @@
+:root {
+    --main-bg-color: rgba(7, 7, 36, 1);
+    --main-text-color: rgba(255, 255, 255, 1);
+
+    --low-opacity-text-color: rgba(255, 255, 255, .5);
+    --low-opacity-border-color: rgba(255, 255, 255, .2);
+
+    --mercury-color: rgba(222, 244, 252, 1);
+    --venus-color: rgba(247, 204, 127, 1);
+    --earth-color: rgba(84, 91, 254, 1);
+    --mars-color: rgba(255, 106, 69, 1);
+    --jupiter-color: rgba(236, 173, 122, 1);
+    --saturn-color: rgba(252, 203, 107, 1);
+    --uranus-color: rgba(101, 240, 213, 1);
+    --neptune-color: rgba(73, 126, 250, 1);
+}

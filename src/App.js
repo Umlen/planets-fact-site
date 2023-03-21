@@ -1,11 +1,11 @@
-import './style/App.css';
+import './style/app.css';
 import Header from './components/Header';
 
 function App() {
   return (
     <div>
       <Header />
-      Learn React
+      App
     </div>
   );
 }

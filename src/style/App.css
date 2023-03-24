@@ -22,6 +22,12 @@ body {
   background-size: cover;
 }
 
+.flex-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo-text,
 .large-header,
 .big-header {
@@ -35,10 +41,32 @@ body {
 }
 
 .base-link {
+  cursor: pointer;
   color: var(--main-text-color);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 1.35px;
   line-height: 25px;
   text-transform: uppercase;
+}
+@media(min-width: 700px) {
+  .base-link {
+    font-size: .7rem;
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 1024px) {
+  .base-link {
+    position: relative;
+  }
+  .base-link:hover::after,
+  .base-link:focus::after {
+    content: "";
+    position: absolute;
+    top: -36px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--link-after-color);
+  }
 }

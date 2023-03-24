@@ -1,11 +1,25 @@
 import './style/app.css';
+import { useState } from 'react';
 import Header from './components/Header';
+import Planet from './components/Planet';
+import planetsData from './planets-data.json';
 
 function App() {
+  const [planet, setPlanet] = useState('Mercury');
+
+  function choosePlanet(e) {
+    console.log(e.currentTarget.id);
+    setPlanet(e.currentTarget.id);
+  }
+
+  function findPlanet() {
+    return planetsData.filter(planetItem => planetItem.name === planet);
+  }
+
   return (
     <div>
-      <Header />
-      App
+      <Header planetsData={planetsData} choosePlanet={choosePlanet} />
+      <Planet planet={findPlanet()} />
     </div>
   );
 }

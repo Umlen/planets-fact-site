@@ -1,6 +1,23 @@
-function Menu() {
+function Menu(props) {
+    const planetsName = props.planetsData.map(({name}) => name);
+    const menuItems = planetsName.map((planet, key) => {
+        return(
+            <p 
+                key={key}
+                id={planet}
+                className='base-link'
+                style={{"--link-after-color": `var(--${planet.toLowerCase()}-color)`}}
+                onClick={(e) => props.choosePlanet(e)}
+            >
+                {planet}
+            </p>
+        );
+    });
+
     return(
-        <nav>MENU</nav>
+        <nav className='flex-row-container main-menu'>
+            {menuItems}
+        </nav>
     );
 }
 

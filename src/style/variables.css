@@ -5,12 +5,21 @@
     --low-opacity-text-color: rgba(255, 255, 255, .5);
     --low-opacity-border-color: rgba(255, 255, 255, .2);
 
-    --mercury-color: rgba(222, 244, 252, 1);
-    --venus-color: rgba(247, 204, 127, 1);
-    --earth-color: rgba(84, 91, 254, 1);
-    --mars-color: rgba(255, 106, 69, 1);
-    --jupiter-color: rgba(236, 173, 122, 1);
-    --saturn-color: rgba(252, 203, 107, 1);
-    --uranus-color: rgba(101, 240, 213, 1);
-    --neptune-color: rgba(73, 126, 250, 1);
+    --mercury-color: rgba(65, 158, 187, 1);
+    --venus-color: rgba(237, 162, 73, 1);
+    --earth-color: rgba(109, 46, 213, 1);
+    --mars-color: rgba(209, 76, 50, 1);
+    --jupiter-color: rgba(216, 58, 52, 1);
+    --saturn-color: rgba(205, 81, 32, 1);
+    --uranus-color: rgba(30, 193, 162, 1);
+    --neptune-color: rgba(45, 104, 240, 1);
+
+    --mercury-mobile-menu-color: rgba(222, 244, 252, 1);
+    --venus-mobile-menu-color: rgba(247, 204, 127, 1);
+    --earth-mobile-menu-color: rgba(84, 91, 254, 1);
+    --mars-mobile-menu-color: rgba(255, 106, 69, 1);
+    --jupiter-mobile-menu-color: rgba(236, 173, 122, 1);
+    --saturn-mobile-menu-color: rgba(252, 203, 107, 1);
+    --uranus-mobile-menu-color: rgba(101, 240, 213, 1);
+    --neptune-mobile-menu-color: rgba(73, 126, 250, 1);
 }

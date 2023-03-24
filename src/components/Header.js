@@ -4,30 +4,39 @@ import '../style/header.css';
 import mobileMenuIcon from '../assets/icons/icon-hamburger.svg';
 import MobileMenu from './MobileMenu';
 import Menu from './Menu';
-import planetsData from '../planets-data.json';
 
-function Header() {
+function Header(props) {
     const isMobileWidth = useResize();
     const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
 
-    function MobileMenuToggler() {
+    function mobileMenuToggler() {
         setIsMobileMenuShown(prevMobileMenu => !prevMobileMenu);
     }
 
     return (
-        <header className='flex-row-container border-bottom header'>
+        <header className='border-bottom header'>
             <p className='logo-text'>the planets</p>
             {
                 isMobileWidth ? 
-                    <img 
-                        src={mobileMenuIcon} 
-                        onClick={MobileMenuToggler} 
-                        style={{opacity: isMobileMenuShown && .25}}
-                        alt='' 
-                    /> : 
-                    <Menu />
+                <img 
+                    src={mobileMenuIcon} 
+                    onClick={mobileMenuToggler} 
+                    style={{opacity: isMobileMenuShown && .25}}
+                    alt='' 
+                /> : 
+                <Menu 
+                    planetsData={props.planetsData} 
+                    choosePlanet={props.choosePlanet} 
+                />
             }
-            {isMobileMenuShown && <MobileMenu planetsData={planetsData} />}
+            {
+                isMobileMenuShown && 
+                <MobileMenu 
+                    planetsData={props.planetsData} 
+                    choosePlanet={props.choosePlanet} 
+                    mobileMenuToggler={mobileMenuToggler} 
+                />
+            }
         </header>
     );
 }

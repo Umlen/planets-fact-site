@@ -1,21 +1,23 @@
-import { Link } from "react-router-dom";
 import arrow from '../assets/icons/icon-chevron.svg';
 
 function MobileMenu(props) {
     const planetsName = props.planetsData.map(({name}) => name);
-
-    const menuItems = planetsName.map(planet => {
-        const lowerCase = planet.toLowerCase();
+    const menuItems = planetsName.map((planet, key) => {
         return(
-            <Link to={`/${lowerCase}`} className='base-link flex-row-container border-bottom mobile-menu-item'>
+            <div 
+                key={key} 
+                className='flex-row-container border-bottom mobile-menu-item' 
+                id={planet}
+                onClick={(e) => {props.choosePlanet(e); props.mobileMenuToggler();}}
+            >
                 <div 
                     className='mobile-menu-item-circle' 
-                    style={{backgroundColor: `var(--${lowerCase}-color)`}}
+                    style={{backgroundColor: `var(--${planet.toLowerCase()}-mobile-menu-color)`}}
                 >
                 </div>
-                <p className='mobile-menu-item-text'>{planet}</p>
+                <p className='mobile-menu-item-text base-link'>{planet}</p>
                 <img src={arrow} alt='' />
-            </Link>
+            </div>
         );
     });
 

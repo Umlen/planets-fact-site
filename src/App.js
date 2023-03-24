@@ -8,7 +8,6 @@ function App() {
   const [planet, setPlanet] = useState('Mercury');
 
   function choosePlanet(e) {
-    console.log(e.currentTarget.id);
     setPlanet(e.currentTarget.id);
   }
 

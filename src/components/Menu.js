@@ -15,7 +15,7 @@ function Menu(props) {
     });
 
     return(
-        <nav className='flex-row-container main-menu'>
+        <nav className='flex-row-container main-menu' aria-label='main menu'>
             {menuItems}
         </nav>
     );

@@ -7,7 +7,7 @@ function SectionMenu(props) {
     const planet = props.planetName;
 
     return (
-        <nav className='section-menu uppercase-text'>
+        <nav className='section-menu uppercase-text' aria-label='section menu'>
             <p 
                 onClick={(e) => props.changeSection(e)} 
                 id='overview' 

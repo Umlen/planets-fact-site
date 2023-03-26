@@ -22,7 +22,7 @@ function MobileMenu(props) {
     });
 
     return(
-        <nav className='mobile-menu'>
+        <nav className='mobile-menu' aria-label='main mobile menu'>
             {menuItems}
         </nav>
     );

@@ -21,15 +21,39 @@ function Planet(props) {
         <main>
             <div className='grid-container'>
                 <aside className='section-menu uppercase-text'>
-                    <p onClick={(e) => changeSection(e)} id='overview' className='section-menu-item'>
+                    <p 
+                        onClick={(e) => changeSection(e)} 
+                        id='overview' 
+                        style={{"--link-after-color": `var(--${planet.name.toLowerCase()}-color)`}}
+                        className={section === 'overview' ? 
+                            'section-menu-item section-menu-item-active' :
+                            'section-menu-item section-menu-item-inactive'
+                        }
+                    >
                         <span className='section-menu-item-number'>01</span>
                         overview
                     </p>
-                    <p onClick={(e) => changeSection(e)} id='structure' className='section-menu-item'>
+                    <p 
+                        onClick={(e) => changeSection(e)} 
+                        id='structure' 
+                        style={{"--link-after-color": `var(--${planet.name.toLowerCase()}-color)`}}
+                        className={section === 'structure' ? 
+                        'section-menu-item section-menu-item-active' :
+                        'section-menu-item section-menu-item-inactive'
+                    }
+                    >
                         <span className='section-menu-item-number'>02</span>
                         {isMobileWidth ? 'structure' : 'internal structure'} 
                     </p>
-                    <p onClick={(e) => changeSection(e)} id='geology' className='section-menu-item'>
+                    <p 
+                        onClick={(e) => changeSection(e)} 
+                        id='geology' 
+                        style={{"--link-after-color": `var(--${planet.name.toLowerCase()}-color)`}}
+                        className={section === 'geology' ? 
+                        'section-menu-item section-menu-item-active' :
+                        'section-menu-item section-menu-item-inactive' 
+                    }
+                    >
                         <span className='section-menu-item-number'>03</span>
                         {isMobileWidth ? 'surface' : 'surface geology'}
                     </p>

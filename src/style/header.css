@@ -31,6 +31,43 @@
     border-bottom: 1px solid var(--low-opacity-border-color);
 }
 
+/*Links*/
+
+.base-link {
+    cursor: pointer;
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1.35px;
+    line-height: 25px;
+  }
+  @media(min-width: 700px) {
+    .base-link {
+      font-size: .7rem;
+      letter-spacing: 1px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .base-link {
+      color: var(--low-opacity-text-color);
+      position: relative;
+    }
+    .base-link:hover,
+    .base-link:focus {
+      color: var(--main-text-color);
+    }
+    .base-link:hover::after,
+    .base-link:focus::after {
+      content: "";
+      position: absolute;
+      top: -36px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: var(--link-after-color);
+    }
+  }
+
 /*Mobile Menu*/
 
 .mobile-menu {

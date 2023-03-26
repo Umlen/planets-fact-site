@@ -69,6 +69,36 @@
     }
 }
 
+@media (min-width: 1280px) {
+    .section-menu-item-inactive:hover {
+        border-color: transparent;
+        background-color: rgba(216, 216, 216, .2);
+    }
+}
+
+.section-menu-item-active {
+    position: relative;
+    color: var(--main-text-color);
+}
+@media (max-width: 699px) {
+    .section-menu-item-active::after {
+        content: "";
+        position: absolute;
+        top: 27px;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: var(--link-after-color);
+    }
+}
+@media (min-width: 700px) {
+    .section-menu-item-active {
+        background-color: var(--link-after-color);
+        border-color: var(--link-after-color);
+    }
+}
+
+
 .section-menu-item-number {
     display: none;
 }
@@ -194,6 +224,10 @@
 .planet-info-source a {
     font-weight: 700;
     color: inherit;
+}
+.planet-info-source a:hover,
+.planet-info-source a:focus {
+    color: var(--main-text-color);
 }
 
 .facts-container {

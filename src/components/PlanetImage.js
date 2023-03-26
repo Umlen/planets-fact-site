@@ -3,17 +3,21 @@ function PlanetImage(props) {
     const section = props.section;
     if (section === 'overview') {
         return (
-            <img src={images.planet} alt={`${name} overview`} />
+            <div className='planet-img-wrapper'>
+                <img src={images.planet} alt={`${name} overview`} className='planet-img' />
+            </div>
         );
     } else if (section === 'structure') {
         return (
-            <img src={images.internal} alt={`${name} internal structure`} />
+            <div className='planet-img-wrapper'>
+                <img src={images.internal} alt={`${name} internal structure`} className='planet-img' />
+            </div>
         );
     } else if (section === 'geology') {
         return (
-            <div>
-                <img src={images.planet} alt={`${name} overview`} />
-                <img src={images.geology} alt={`${name} surface geology`} />
+            <div className='planet-img-wrapper'>
+                <img src={images.planet} alt={`${name} overview`} className='planet-img' />
+                <img src={images.geology} alt={`${name} surface geology`} className='planet-img-geology'/>
             </div>
         );
     }

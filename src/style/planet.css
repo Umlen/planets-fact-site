@@ -1,0 +1,259 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 75px 0;
+    margin-bottom: 30px;
+}
+@media (min-width: 700px) {
+    .grid-container {
+        padding: 0 40px;
+        grid-template-areas: 
+            "picture picture"
+            "info section-menu"
+        ;
+        gap: 120px 0;
+    }
+}
+@media (min-width: 1280px) {
+    .grid-container {
+        grid-template-columns: 1fr 350px;
+        align-items: center;
+        grid-template-areas: 
+            "picture info"
+            "picture section-menu"
+        ;
+        gap: 0 150px;
+        padding: 0 165px;
+        margin-bottom: 90px;
+    }
+}
+
+.section-menu {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--low-opacity-border-color);
+}
+@media (min-width: 700px) {
+    .section-menu {
+        padding: 0;
+        border-bottom: none;
+        grid-area: section-menu;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+.section-menu-item {
+    cursor: pointer;
+    font-size: .56rem;
+    color: var(--low-opacity-text-color);
+    font-weight: 700;
+}
+@media (min-width: 700px) {
+    .section-menu-item {
+        border: 1px solid var(--low-opacity-border-color);
+        padding: 10px 20px 8px;
+        color: var(--main-text-color);
+        min-width: 280px;
+    }
+}
+@media (min-width: 1280px) {
+    .section-menu-item {
+        padding: 12px 28px 10px;
+        font-size: .75rem;
+    }
+}
+
+.section-menu-item-number {
+    display: none;
+}
+@media (min-width: 700px) {
+    .section-menu-item-number {
+        display: inline;
+        margin-right: 17px;
+        color: var(--low-opacity-text-color);
+    }
+}
+@media (min-width: 1280px) {
+    .section-menu-item-number {
+        margin-right: 25px;
+    }
+}
+
+.planet-img-wrapper {
+    position: relative;
+}
+@media (min-width: 700px) {
+    .planet-img-wrapper {
+        grid-area: picture;
+    }
+}
+
+.planet-img {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
+@media (min-width: 700px) {
+    .planet-img {
+        max-width: 60%;
+    }
+}
+@media (min-width: 1280px) {
+    .planet-img {
+        max-width: 100%;
+    }
+}
+
+.planet-img-geology {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    max-width: 64px;
+    height: auto;
+}
+@media (min-width: 700px) {
+    .planet-img-geology {
+        max-width: 140px;
+        transform: translate(-50%, -90%);
+    }
+}
+@media (min-width: 1280px) {
+    .planet-img-geology {
+        max-width: 160px;
+    }
+}
+
+.planet-info {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 700px) {
+    .planet-info {
+        padding: 0;
+        grid-area: info;
+        text-align: left;
+        align-items: flex-start;
+        margin-right: 70px;
+    }
+}
+@media (min-width: 1280px) {
+    .planet-info {
+        margin: 0 0 40px;
+    }
+}
+
+.planet-info-text {
+    font-size: .7rem;
+    line-height: 2em;
+    margin-bottom: 32px;
+}
+@media (min-width: 1280px) {
+    .planet-info-text {
+        font-size: .875rem;
+        line-height: 1.8em;
+        margin-bottom: 24px;
+    }
+}
+
+.planet-info-source {
+    color: var(--low-opacity-text-color);
+    font-size: .75rem;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+@media (min-width: 700px) {
+    .planet-info-source {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 1280px) {
+    .planet-info-source {
+        font-size: .875rem;
+        line-height: 1.8em;
+        gap: 8px;
+    }
+}
+.planet-info-source a {
+    font-weight: 700;
+    color: inherit;
+}
+
+.facts-container {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+@media (min-width: 700px) {
+    .facts-container {
+        padding: 0 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+}
+@media (min-width: 1280px) {
+    .facts-container {
+        padding: 0 165px;
+        gap: 30px;
+        margin-bottom: 55px;
+    }
+}
+
+.fact-wrapper {
+    border: 1px solid var(--low-opacity-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 24px;
+}
+@media (min-width: 700px) {
+    .fact-wrapper {
+        width: 100%;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+@media (min-width: 1280px) {
+    .fact-wrapper {
+        padding: 20px 24px;
+        gap: 8px;
+    }
+}
+
+.fact-name {
+    color: var(--low-opacity-text-color);
+    font-size: .5rem;
+    letter-spacing: .73px;
+    font-weight: 700;
+    line-height: 2em;
+}
+@media (min-width: 1280px) {
+    .fact-name {
+        font-size: .7rem;
+        letter-spacing: 1px;
+        line-height: 2.25em;
+    }
+}

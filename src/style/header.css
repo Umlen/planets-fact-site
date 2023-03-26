@@ -1,3 +1,9 @@
+.flex-row-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 .header {
     padding: 16px 24px;
     margin-bottom: 20px;
@@ -8,7 +14,7 @@
 @media (min-width: 700px) and (max-width: 1023px) {
     .header {
         padding: 30px 50px;
-        margin-bottom: 145px;
+        margin-bottom: 110px;
         gap: 40px;
         flex-direction: column;
     } 
@@ -34,7 +40,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
     padding: 44px 24px 66px;
     background-color: var(--main-bg-color);
 }

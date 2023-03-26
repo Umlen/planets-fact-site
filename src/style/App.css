@@ -22,22 +22,52 @@ body {
   background-size: cover;
 }
 
-.flex-row-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.uppercase-text {
+  text-transform: uppercase;
 }
 
 .logo-text,
 .large-header,
-.big-header {
+.big-text {
   font-family: 'Antonio', sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
 }
 
 .logo-text {
   font-size: 1.75rem;
+}
+
+.large-header {
+  font-size: 2.5rem;
+  margin: 0 0 16px;
+}
+@media (min-width: 700px) {
+  .large-header {
+    font-size: 3rem;
+    margin: 0 0 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .large-header {
+    font-size: 5rem;
+  }
+}
+
+.big-text {
+  font-size: 1.25rem;
+  letter-spacing: -0.75px;
+}
+@media (min-width: 700px) {
+  .big-text {
+    font-size: 1.5rem;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 1280px) {
+  .big-text {
+    font-size: 2.5rem;
+    letter-spacing: -1.5px;
+  }
 }
 
 .base-link {
@@ -47,7 +77,6 @@ body {
   font-weight: 700;
   letter-spacing: 1.35px;
   line-height: 25px;
-  text-transform: uppercase;
 }
 @media(min-width: 700px) {
   .base-link {

@@ -14,7 +14,7 @@ function Header(props) {
     }
 
     return (
-        <header className='border-bottom header'>
+        <header className='border-bottom header uppercase-text'>
             <p className='logo-text'>the planets</p>
             {
                 isMobileWidth ? 

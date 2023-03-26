@@ -1,4 +1,4 @@
-import './style/app.css';
+import './style/App.css';
 import { useState } from 'react';
 import Header from './components/Header';
 import Planet from './components/Planet';
